@@ -1,0 +1,24 @@
+<ion-header>
+<ion-navbar>
+        <button menuToggle>
+      <ion-icon name="wine"></ion-icon>
+    </button>
+        <ion-title>
+            <img itemprop="logo" class="logo photo non-retina" src="http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2015/05/decanter-logo-1.png?v=5659089613808568320" alt="Decanter">
+         </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="wine-scanner-wrapper">
+  <ion-card>
+    <ion-card-content class="wine-box">
+       <div class="image-box">
+           <img src="../../build/images/wine.png"/>
+        <img [src]="base64Image" *ngIf="base64Image" />
+       </div>
+    </ion-card-content>
+    
+  </ion-card>
+  <div class="camera-wrapper">
+       <button (click)="takePicture()"><ion-icon name="camera"></ion-icon></button>
+    </div>
+</ion-content>

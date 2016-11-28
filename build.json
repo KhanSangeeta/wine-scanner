@@ -1,0 +1,11 @@
+{
+     "android": {
+         "debug": {
+         },
+         "release": {
+             "keystore": "./.keys/TIMediaSolutions.keystore",
+             "alias": "timediakey",
+             "keystoreType": "jks"
+         }
+     }
+ }

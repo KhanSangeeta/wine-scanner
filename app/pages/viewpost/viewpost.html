@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Post</ion-title>
+    <ion-buttons end>
+      <button (click)="editPost(post)" *ngIf="postKey.post_status!=='publish'">
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding class="view-post">
+    <h4>{{ post.title}} </h4>
+    <hr>
+    <div class="clearfix">
+      <span id="status-container" [ngClass]="statusMap[post.post_status]" float-left>
+          {{statusMap[post.post_status]}}
+      </span>
+      <span float-right *ngIf="post.post_modified_gmt">
+        <ion-icon id="clockIcon" name="clock"></ion-icon>
+        <time>{{convertUTCToLocalTime(post.post_modified_gmt)| amTimeAgo:true}} ago</time>
+      </span>
+    </div>
+
+    <hr />
+    
+    <div>
+      <img src="{{post.featured_image_url}}">
+    </div>
+
+    <p [innerHTML]="post.post_content">
+    </p>
+  </div>
+</ion-content>

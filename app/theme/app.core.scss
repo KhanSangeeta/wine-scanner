@@ -1,0 +1,109 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+
+.segemnt-icon-text .segment-button {
+    height: 6rem;
+    line-height: 2rem;
+}
+
+.padding {
+    padding: 20px;
+}
+
+.no-content-text {
+    text-align: center;
+    margin-top: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+[float-right] {
+    float:right;
+}
+
+[float-left] {
+    float:left;
+}
+
+.item .item-button {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em; 
+}
+
+.ios .hide-ios, .ios .button-hide-ios {
+    display: none;
+}
+
+.Published {
+    color: green;
+}
+.Draft {
+    color: blue;
+}
+.Rejected {
+    color: red;
+}
+
+.item.no-border .item-inner {
+    border: 0;
+}
+
+.toolbar-background {
+   //border-color: #72382f;
+   //background: #722f48;
+}
+
+.toolbar-title {
+    color:#722f48;
+}
+.wine-menu button{
+     color:#722f48;
+}
+.wine-menu button icon{
+     color:#722f48;
+}
+
+.toolbar-background ~ *, .toolbar button {
+    color:#722f48;
+}
+
+ion-header ion-buttons .bar-button {
+    padding-right: 1rem;
+}
+
+.attach-image {
+    position: relative;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+
+    input[type=file] {
+        width: 100%;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        height: 40px;
+        opacity: 0;
+    }
+
+    img {
+        max-width: 100%;
+        text-align: center;
+        color: brown;
+    }
+}
+
+.top-right-corner {
+    top: 0;
+    right:0;
+}
+
+@import "../pages/takepicture/takepicture";
+
